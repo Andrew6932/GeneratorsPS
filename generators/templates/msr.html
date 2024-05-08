@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Другая страница</title>
+</head>
+<body>
+    <header>
+        <h1>Это другая страница</h1>
+    </header>
+    <main>
+        <p>Привет, это содержимое другой страницы.</p>
+        <!-- Ползунок для возврата на первую страницу -->
+        <input type="range" min="1" max="2" value="2" class="slider" id="myRange">
+        <!-- Элемент для отображения текущего значения ползунка -->
+        <p>Текущее значение: <span id="sliderValue">2</span></p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Моя компания. Все права защищены.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("sliderValue");
+
+        slider.oninput = function() {
+            output.innerHTML = this.value;
+            // Переключение страницы при изменении значения ползунка
+            if (this.value == 1) {
+                window.location.href = "{% url 'base' %}";
+            } else if (this.value == 2) {
+                window.location.href = "{% url 'msr' %}";
+            }
+        }
+    </script>
+</body>
+</html>
+
