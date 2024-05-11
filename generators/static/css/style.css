@@ -1,0 +1,115 @@
+/* styles.css */
+
+body {
+    background-color: rgba(194, 117, 117, 0.86); /* выберите цвет фона, который вам нравится */
+    font-family: Arial, sans-serif; /* выберите шрифт */
+}
+
+/* Стили для кнопки */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff; /* цвет фона кнопки */
+    color: #fff; /* цвет текста кнопки */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* анимация при наведении */
+}
+
+.button:hover {
+    background-color: #0056b3; /* изменение цвета фона при наведении */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.slider {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.slider + p {
+    margin-bottom: 30px;
+}
+
+
+.slider-container {
+    width: 80%; /* Ширина контейнера */
+    margin: 20px auto; /* Расположение по центру */
+    text-align: center; /* Выравнивание по центру */
+}
+
+/* Стили для самого переключателя */
+.slider {
+    -webkit-appearance: none; /* Убираем стандартные стили для WebKit браузеров */
+    width: 80%; /* Ширина переключателя */
+    height: 5px; /* Высота переключателя */
+    background: #d3d3d3; /* Цвет фона */
+    outline: none; /* Убираем рамку при фокусе */
+    opacity: 0.7; /* Прозрачность */
+    -webkit-transition: .2s; /* Плавное изменение при фокусе */
+    transition: opacity .2s;
+    border-radius: 10px; /* Закругление углов */
+}
+
+/* Стили для заполненной части переключателя */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Убираем стандартный вид для WebKit браузеров */
+    appearance: none; /* Убираем стандартный вид */
+    width: 15px; /* Ширина заполненной части */
+    height: 15px; /* Высота заполненной части */
+    background: #007bff; /* Цвет заполненной части */
+    cursor: pointer; /* Курсор указывает на то, что элемент можно кликнуть */
+    border-radius: 50%; /* Закругляем края для создания круглого вида */
+    -webkit-transition: .2s; /* Плавное изменение при фокусе */
+    transition: .2s;
+}
+
+/* Стили для текущего значения */
+.slider-value {
+    margin-top: 10px; /* Отступ сверху */
+    font-size: 16px; /* Размер шрифта */
+    color: #555; /* Цвет текста */
+}
